@@ -1,0 +1,279 @@
+body{
+    font-family: "Public Sans", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #000;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* header */
+
+.logo .image {
+    width: 100px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 0;
+    max-width: 1170px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+@media(max-width: 624px) {
+    .header {
+        justify-content: center;
+    }
+
+    .header .logo {
+        margin-bottom: 30px;
+    }
+
+    .header .menu .item a {
+        font-size: calc(0.6em + 1vw);
+    }
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.logo .title {
+    margin-left: 7px;
+    font-size: 17px;
+    transition: 0.3s ease-in-out;
+    font-weight: 800;
+}
+
+.title:hover {
+    color: #1ed760;
+}
+
+.header .menu {
+    display: flex;
+}
+
+.header .navigation .menu .item {
+    margin: 10px;
+
+}
+
+.header .navigation .menu .item a {
+    padding: 15px;
+    transition: 0.3s ease-in-out;
+}
+
+.header .navigation .menu .item a:hover {
+    background-color: #1ed760;
+    color: white;
+}
+
+
+/* Panels*/
+
+.main-content .panels {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 700px;
+    position: relative;
+}
+
+@media(max-width:900px) {
+    .main-content .panels {
+        height: 500px;
+    }
+}
+
+.main-content .panels .image-panels {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    filter: brightness(70%);
+
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+}
+
+.main-content .panels .project1 {
+    background-image: url('../imagens/painel1.jpg');
+}
+
+.main-content .panels .project2 {
+    background-image: url('../imagens/painel2.jpg')
+}
+
+.main-content .panels .project3 {
+    background-image: url('../imagens/painel3.jpg')
+}
+
+.main-content .panels .image-panels.show{
+    opacity: 1;
+}
+
+.main-content .panels .title {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: calc(1em + 1vw);
+}
+
+.main-content .panels .arrow {
+    background-image: url(../imagens/seta.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    text-indent: 100%;
+    overflow: hidden;
+}
+
+.main-content .panels .arrow.btn-back {
+    left: 20px;
+    transform: rotateY(180deg);
+}
+
+.main-content .panels .arrow.btn-forward {
+    right: 20px;
+}
+
+
+/* who we are */
+
+
+.who-we-are {
+    background-color: #2941ab;
+}
+
+.who-we-are .content {
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+}
+
+.who-we-are .content .information {
+    width: 48%;
+}
+
+.who-we-are .content .image {
+    width: 60%;
+}
+
+.who-we-are .content .information .title {
+    font-size: 50px;
+    color: #1ed760;
+    margin-bottom: 20px;
+}
+
+.who-we-are .content .information .text {
+    font-size: 20px;
+    line-height: 1.5;
+    color: #fff;
+    font-weight: 400;
+}
+
+@media(max-width: 1200px) {
+    .who-we-are .content {
+        flex-direction: column;
+        text-align: center;
+        padding: 100px 10px;
+    }
+
+    .who-we-are .content .image {
+        display: none;
+    }
+
+    .who-we-are .content .information {
+        width: 100%;
+    }
+}
+
+/* Footer */
+
+
+.baseboard {
+    padding: 80px 0 20px 0;
+}
+
+.baseboard .navigation {
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.baseboard .navigation .logo .image {
+    width: 100px;
+}
+
+.baseboard .social-media {
+    display: flex;
+}
+
+.baseboard .social-media a {
+    display: flex;
+    justify-content: center;
+    margin: 0 10px;
+    font-size: 30px;
+    border: 2px solid;
+    border-radius: 50%;
+    padding: 15px;
+    width: 65px;
+    transition: 0.3s ease-in-out;
+}
+
+.baseboard .social-media a:hover {
+    background-color: #1ed760;
+}
+
+
+.baseboard .copyright {
+    margin-top: 70px;
+    text-align: center;
+}
+
+@media(max-width:940px) {
+    .baseboard .navigation {
+        justify-content: center;
+    }
+
+    .baseboard .navigation .logo {
+        margin-bottom: 30px;
+    }
+
+    .baseboard .navigation .logo, 
+    .baseboard .navigation .social-media{
+        width: 100%;
+        justify-content: center;
+    }
+}
